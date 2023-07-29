@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300;1,600;1,800&family=Roboto:ital,wght@1,500;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --prim-col:#183b56;
+    --secon-col:#577592;
+    --accent-col:#2294ed;
+    --accent-col--dark:#1d69a3;
+
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    color: var(--prim-col) ;
+
+}
+
+p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--secon-col);
+    line-height: 1.4rem;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+
+}
+
+.icon{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+
+}
+
+
+
+.ham{  
+    display:none;  
+    padding:5px;  
+    cursor:pointer;  
+   }  
+   .bar1,.bar2,.bar3{  
+    display:block;  
+    width:35px;  
+    height:3px;  
+    margin:5px auto;  
+    background-color:#101010;  
+    transition: 0.4s;  
+   }  
+
+
+
+.mainnav{
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.logo-com img{
+    width: 120px;
+}
+
+.navlinks ul{
+    gap: 18px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.hoverlink{
+    cursor: pointer;
+
+}
+.hoverlink:hover{
+    color: var(--accent-col--dark);
+
+}
+.hoverlink:active{
+    color:red;
+
+}
+
+.navitem{
+    transition: all 0.4s ease;
+}
+
+.navitem.active{
+    color: var(--accent-col);
+}
+
+.searchbar{
+    height: 32px;
+    gap: 8px;
+}
+
+.newsinput{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.searchbutton{
+    background-color: var(--accent-col);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.searchbutton:hover{
+    background-color: var(--accent-col--dark);
+}
+
+
+
+
+main{
+    padding-block: 20px;
+    margin-top: 100px;
+}
+
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4acff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-3px);
+}
+
+.cards-container img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 12px;
+
+}
+
+.news-source{
+    margin-block: 12px;
+}
+
+
+
+
+
+/* media querys */
+
+@media screen and (max-width: 1150px){
+    .cards-container{
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .mainmenu{  
+        position:absolute;   
+        top:10vh;  
+        right:0px;  
+        flex-direction:column;  
+        background-color:white;  
+        height: 250px;
+        width: 200px;
+        justify-content: space-evenly;
+        border-radius:0px 0px 0px 20px;  
+        transition:transform 0.3s ease-in;  
+        transform:translate(100%);  
+       }  
+
+       .mainmenu li{
+        font-size: 24px;
+        font-weight: 600;
+       }
+      .nav-change{  
+        transform:translate(0%);  
+       }  
+      .ham{  
+        display:block;  
+       }  
+      .change .bar1 {  
+       transform: rotate(45deg) translate(8px,3px);  
+      }  
+      .change .bar2 {  
+       opacity: 0;  
+      }  
+      .change .bar3 {  
+       transform: rotate(-45deg) translate(8px,-3px);  
+      }  
+
+
+.cards-container{
+    justify-content: center;
+}
+
+
+
+.searchbar{
+    gap: 0;
+}
+
+.newsinput{
+    width: 30vw;
+
+}
+
+.searchbutton{
+    width: 20vw;
+
+}
+
+
+}
+
+
+@media screen and (max-width: 550px){
+
+    .bar1,.bar2,.bar3{
+        width: 20vh;
+    }
+
+}
